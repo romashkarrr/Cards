@@ -62,12 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				84BC846F2C19910200F32D31 /* CardsApp.swift */,
-				84BC84712C19910200F32D31 /* ContentView.swift */,
-				84BC847D2C19917B00F32D31 /* CardsListView.swift */,
-				84BC84832C19AE2000F32D31 /* ToolbarSelection.swift */,
-				84BC84812C199A9100F32D31 /* SingleCardView.swift */,
-				84BC84852C19AE5A00F32D31 /* BottomToolbar.swift */,
-				84BC847F2C1999E800F32D31 /* CardThumbnail.swift */,
+				84BC848A2C19B9D900F32D31 /* Views */,
 				84BC84732C19910300F32D31 /* Assets.xcassets */,
 				84BC84752C19910300F32D31 /* Preview Content */,
 			);
@@ -80,6 +75,27 @@
 				84BC84762C19910300F32D31 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84BC848A2C19B9D900F32D31 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84BC84712C19910200F32D31 /* ContentView.swift */,
+				84BC847D2C19917B00F32D31 /* CardsListView.swift */,
+				84BC848B2C19BA4D00F32D31 /* Single Card View */,
+				84BC847F2C1999E800F32D31 /* CardThumbnail.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84BC848B2C19BA4D00F32D31 /* Single Card View */ = {
+			isa = PBXGroup;
+			children = (
+				84BC84832C19AE2000F32D31 /* ToolbarSelection.swift */,
+				84BC84812C199A9100F32D31 /* SingleCardView.swift */,
+				84BC84852C19AE5A00F32D31 /* BottomToolbar.swift */,
+			);
+			path = "Single Card View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

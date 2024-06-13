@@ -21,6 +21,7 @@
 		84BC84922C1ABECB00F32D31 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC84912C1ABECB00F32D31 /* Operators.swift */; };
 		84BC84952C1AF86800F32D31 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC84942C1AF86800F32D31 /* Settings.swift */; };
 		84BC84982C1AFAAA00F32D31 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC84972C1AFAAA00F32D31 /* ColorExtensions.swift */; };
+		84BC849A2C1AFD2800F32D31 /* CardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC84992C1AFD2800F32D31 /* CardToolbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		84BC84912C1ABECB00F32D31 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		84BC84942C1AF86800F32D31 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		84BC84972C1AFAAA00F32D31 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		84BC84992C1AFD2800F32D31 /* CardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardToolbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		84BC848B2C19BA4D00F32D31 /* Single Card View */ = {
 			isa = PBXGroup;
 			children = (
+				84BC84992C1AFD2800F32D31 /* CardToolbar.swift */,
 				84BC84832C19AE2000F32D31 /* ToolbarSelection.swift */,
 				84BC84812C199A9100F32D31 /* SingleCardView.swift */,
 				84BC84852C19AE5A00F32D31 /* BottomToolbar.swift */,
@@ -209,6 +212,7 @@
 			files = (
 				84BC84802C1999E800F32D31 /* CardThumbnail.swift in Sources */,
 				84BC84922C1ABECB00F32D31 /* Operators.swift in Sources */,
+				84BC849A2C1AFD2800F32D31 /* CardToolbar.swift in Sources */,
 				84BC84722C19910200F32D31 /* ContentView.swift in Sources */,
 				84BC848D2C1A217E00F32D31 /* ResizableView.swift in Sources */,
 				84BC847E2C19917B00F32D31 /* CardsListView.swift in Sources */,

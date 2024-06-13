@@ -17,7 +17,7 @@ struct CardsListView: View {
                 ForEach(0..<10) { _ in
                     CardThumbnail()
                         .onTapGesture {
-                            isPresented = true
+                             isPresented = true
                         }
                 }
             }

@@ -12,9 +12,27 @@ struct SingleCardView: View {
     @State private var currentModal: ToolbarSelection?
     @Environment(\.dismiss) var dismiss
 
+    var content: some View {
+        ZStack {
+            Group {
+                Capsule()
+                    .foregroundColor(.yellow)
+                Text("ResixebleMe!")
+                    .fontWeight(.bold)
+                    .font(.system(size: 500))
+                    .minimumScaleFactor(0.01)
+                    .lineLimit(1)
+            }
+            .resizebleView()
+            Circle()
+                .resizebleView()
+                .offset(CGSize(width: 50, height: 200))
+        }
+    }
+
     var body: some View {
         NavigationStack {
-            Color.yellow
+            content
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("Done") {
@@ -22,7 +40,7 @@ struct SingleCardView: View {
                         }
                     }
                     ToolbarItem(placement: .bottomBar) {
-                       BottomToolbar(modal: $currentModal)
+                        BottomToolbar(modal: $currentModal)
                     }
                 }
                 .sheet(item: $currentModal) { item in

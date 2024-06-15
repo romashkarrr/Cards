@@ -10,34 +10,16 @@ import SwiftUI
 struct SingleCardView: View {
 
     @State private var currentModal: ToolbarSelection?
-    @Environment(\.dismiss) var dismiss
-
-    var content: some View {
-        ZStack {
-            Group {
-                Capsule()
-                    .foregroundColor(.yellow)
-                Text("ResixebleMe!")
-                    .fontWeight(.bold)
-                    .font(.system(size: 500))
-                    .minimumScaleFactor(0.01)
-                    .lineLimit(1)
-            }
-            .resizebleView()
-            Circle()
-                .resizebleView()
-                .offset(CGSize(width: 50, height: 200))
-        }
-    }
+    @Binding var card: Card
 
     var body: some View {
         NavigationStack {
-            content
+            CardDetailView(card: $card)
                 .modifier(CardToolbar(currentModal: $currentModal))
         }
     }
 }
 
 #Preview {
-    SingleCardView()
+    SingleCardView(card: .constant(initialCards[0]))
 }

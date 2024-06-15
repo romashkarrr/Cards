@@ -12,7 +12,7 @@ struct ResizableView: ViewModifier {
     @State private var scale: CGFloat = 1.0
     @State private var previousRotation: Angle = .zero
     @State private var preciousOffset: CGSize = .zero
-    @State private var transform = Transform()
+    @Binding var transform: Transform
 
     var dragGesture: some Gesture {
         DragGesture()
@@ -55,17 +55,20 @@ struct ResizableView: ViewModifier {
             .offset(transform.offset)
             .gesture(dragGesture)
             .gesture(SimultaneousGesture(rotationGesture, scaleGesture))
+            .onAppear {
+                preciousOffset = transform.offset
+            }
     }
 }
 
 #Preview {
     RoundedRectangle(cornerRadius: 30.0)
         .foregroundColor(Color.blue)
-        .resizebleView()
+        .resizebleView(transform: .constant(Transform()))
 }
 
 extension View {
-    func resizebleView() -> some View {
-        modifier(ResizableView())
+    func resizebleView(transform: Binding<Transform> ) -> some View {
+        modifier(ResizableView(transform: transform))
     }
 }

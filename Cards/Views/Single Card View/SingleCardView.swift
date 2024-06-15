@@ -15,7 +15,7 @@ struct SingleCardView: View {
     var body: some View {
         NavigationStack {
             CardDetailView(card: $card)
-                .modifier(CardToolbar(currentModal: $currentModal))
+                .modifier(CardToolbar(card: $card, currentModal: $currentModal))
         }
     }
 }

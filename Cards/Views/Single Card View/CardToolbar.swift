@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CardToolbar: ViewModifier {
 
+    @Binding var card: Card
+    @State private var stickerImage: UIImage?
     @Binding var currentModal: ToolbarSelection?
     @Environment(\.dismiss) var dismiss
 
@@ -26,6 +28,14 @@ struct CardToolbar: ViewModifier {
             }
             .sheet(item: $currentModal) { item in
                 switch item {
+                case .stickerModal:
+                    StikerModal(stickerImage: $stickerImage)
+                        .onDisappear {
+                            if let stickerImage = stickerImage {
+                                card.addElement(uiImage: stickerImage)
+                            }
+                            stickerImage = nil
+                        }
                 default:
                     Text(String(describing: item))
                 }

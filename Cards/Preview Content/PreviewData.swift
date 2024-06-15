@@ -5,7 +5,7 @@
 //  Created by romashka on 13.06.2024.
 //
 
-import SwiftUIc
+import SwiftUI
 
 
 let initialCards: [Card] = [

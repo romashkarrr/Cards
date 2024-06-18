@@ -20,5 +20,11 @@ class CardStore: ObservableObject {
             cards = initialCards
         }
     }
+
+    func remove(_ card: Card) {
+        if let index = index(for: card) {
+            cards.remove(at: index)
+        }
+    }
 }
 

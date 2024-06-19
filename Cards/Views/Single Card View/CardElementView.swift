@@ -14,6 +14,7 @@ struct CardElementView: View {
     var body: some View {
         if let element = element as? ImageElement {
             ImageElementView(element: element)
+                .clip()
         }
 
         if let element = element as? TextElement {
@@ -49,4 +50,17 @@ struct TextElementView: View {
 
 #Preview {
     CardElementView(element: initialElements[0])
+}
+
+private extension ImageElementView {
+
+    @ViewBuilder
+    func clip() -> some View {
+        if let frameIndex = element.frameIndex {
+            let shape = Shapes.shapes[frameIndex]
+            self
+                .clipShape(shape)
+                .contentShape(shape)
+        } else { self }
+    }
 }

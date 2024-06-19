@@ -9,6 +9,7 @@ import SwiftUI
 
 class CardStore: ObservableObject {
 
+    @Published var selectedElement: CardElement?
     @Published var cards: [Card] = []
 
     func index(for card: Card) -> Int? {

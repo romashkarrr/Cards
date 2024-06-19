@@ -25,6 +25,7 @@ struct ImageElement: CardElement {
     var uiImage: UIImage?
     var id = UUID()
     var transform = Transform()
+    var frameIndex: Int?
 
     var image: Image {
         Image(

@@ -36,8 +36,7 @@ struct ElementContextMenu: ViewModifier {
 
 extension View {
 
-    func elementContextMenu(card: Binding<Card>, 
-                            element: Binding<CardElement>) -> some View {
+    func elementContextMenu(card: Binding<Card>, element: Binding<CardElement>) -> some View {
         modifier(ElementContextMenu(card: card, element: element))
     }
 }

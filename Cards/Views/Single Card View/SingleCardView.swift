@@ -20,6 +20,16 @@ struct SingleCardView: View {
     }
 }
 
+struct SingleCardPreview: View {
+
+    @EnvironmentObject var store: CardStore
+
+    var body: some View {
+        SingleCardView(card: $store.cards[0])
+    }
+}
+
 #Preview {
-    SingleCardView(card: .constant(initialCards[0]))
+    SingleCardPreview()
+        .environmentObject(CardStore(defaultData: true))
 }

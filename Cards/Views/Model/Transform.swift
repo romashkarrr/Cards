@@ -15,3 +15,4 @@ struct Transform {
     var offset: CGSize = .zero
 }
 
+extension Transform: Codable {}

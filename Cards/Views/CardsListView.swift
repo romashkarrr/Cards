@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardsListView: View {
 
+    @Environment(\.scenePhase) private var scenePhase
     @State private var selectedCard: Card?
     @EnvironmentObject var store: CardStore
 
@@ -33,13 +34,23 @@ struct CardsListView: View {
     }
 
     var body: some View {
-        list
-            .fullScreenCover(item: $selectedCard) { card in
-                if let index = store.index(for: card) {
-                    SingleCardView(card: $store.cards[index])
-                } else {
-                    fatalError("Unable to locate selected card")
-                }
+        VStack {
+            list
+                .fullScreenCover(item: $selectedCard) { card in
+                    if let index = store.index(for: card) {
+                        SingleCardView(card: $store.cards[index])
+                            .onChange(of: scenePhase) { oldScenePhace, newScenePhase in
+                                if newScenePhase == .inactive {
+                                    store.cards[index].save()
+                                }
+                            }
+                    } else {
+                        fatalError("Unable to locate selected card")
+                    }
+            }
+            Button("Add") {
+                selectedCard = store.addCard()
+            }
         }
     }
 }

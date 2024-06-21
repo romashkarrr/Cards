@@ -17,8 +17,8 @@ struct PhotosModal: View {
         PhotosPicker(selection: $selectedItems, matching: .images) {
             ToolbarButton(modal: .photoModal)
         }
-        .onChange(of: selectedItems) { items in
-            for item in items {
+        .onChange(of: selectedItems) { newValue, rawValue in
+            for item in rawValue {
                 item.loadTransferable(type: Data.self) { result in
                     Task {
                         switch result {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8414552A2C25A140008971F4 /* AngleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841455292C25A13F008971F4 /* AngleExtensions.swift */; };
+		8414552C2C25DEC1008971F4 /* TextModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414552B2C25DEC1008971F4 /* TextModal.swift */; };
 		848A52582C1DD3AE006B7F66 /* PhotosModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A52572C1DD3AE006B7F66 /* PhotosModal.swift */; };
 		848A525A2C21C30F006B7F66 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A52592C21C30F006B7F66 /* UIImageExtensions.swift */; };
 		848A525C2C21C911006B7F66 /* CustomTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A525B2C21C911006B7F66 /* CustomTransfer.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		841455292C25A13F008971F4 /* AngleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleExtensions.swift; sourceTree = "<group>"; };
+		8414552B2C25DEC1008971F4 /* TextModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModal.swift; sourceTree = "<group>"; };
 		848A52572C1DD3AE006B7F66 /* PhotosModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModal.swift; sourceTree = "<group>"; };
 		848A52592C21C30F006B7F66 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		848A525B2C21C911006B7F66 /* CustomTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransfer.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 				84BC84972C1AFAAA00F32D31 /* ColorExtensions.swift */,
 				84BC849D2C1B05E800F32D31 /* TextExtensions.swift */,
 				848A52592C21C30F006B7F66 /* UIImageExtensions.swift */,
+				841455292C25A13F008971F4 /* AngleExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 				84BC84B02C1DB49400F32D31 /* StikerModal.swift */,
 				848A52572C1DD3AE006B7F66 /* PhotosModal.swift */,
 				848A52612C22D56D006B7F66 /* FrameModal.swift */,
+				8414552B2C25DEC1008971F4 /* TextModal.swift */,
 			);
 			path = "Card Modal Views";
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 				84BC84A22C1B0CE100F32D31 /* Card.swift in Sources */,
 				84BC849C2C1B05B300F32D31 /* PreviewData.swift in Sources */,
 				848A525E2C21D9CE006B7F66 /* ElementContextMenu.swift in Sources */,
+				8414552C2C25DEC1008971F4 /* TextModal.swift in Sources */,
 				84BC84B12C1DB49400F32D31 /* StikerModal.swift in Sources */,
 				84BC848D2C1A217E00F32D31 /* ResizableView.swift in Sources */,
 				84BC847E2C19917B00F32D31 /* CardsListView.swift in Sources */,
@@ -293,6 +300,7 @@
 				848A52602C21E56C006B7F66 /* Shapes.swift in Sources */,
 				84BC84982C1AFAAA00F32D31 /* ColorExtensions.swift in Sources */,
 				848A525C2C21C911006B7F66 /* CustomTransfer.swift in Sources */,
+				8414552A2C25A140008971F4 /* AngleExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
